@@ -15,8 +15,20 @@ public class Deck {
         {
             for(int i = 0;i<Rank.length;i++)
             {
-                deck.add(new Card(Rank , Suit, pointValue));
+                deck.add(new Card(Rank[i] , Suit[s], pointValue[i]));
             }
         }
+    }
+    public boolean isEmpty()
+    {
+        return unDealt.size() == 0;
+    }
+    public int size(int amount)
+    {
+        return unDealt.size();
+    }
+    public Card deal()
+    {
+        return unDealt.remove(0)
     }
 }
