@@ -11,12 +11,25 @@ public class Card {
         this.Suit = Suit;
         this.pointValue =  pointValue;
     }
+
+    public String getRank()
+    {
+        return this.Rank;
+    }
+    public String getSuit()
+    {
+        return this.Suit;
+    }
+    public int getPointValue()
+    {
+        return this.pointValue;
+    }
     public boolean equals(Card otherCard)
     {
         return this.pointValue == otherCard.pointValue;
     }
     public String toString()
     {
-        return this.Rank + " " + " " + this.Suit + " " + this.pointValue;
+        return this.Rank + " of " + this.Suit;
     }
 }
